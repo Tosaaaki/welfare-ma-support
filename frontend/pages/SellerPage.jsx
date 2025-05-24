@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+import Footer from "../components/common/Footer";
 function MainComponent() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [facilitySize, setFacilitySize] = useState('');
@@ -214,17 +216,9 @@ function MainComponent() {
             </div>
           </section>
   
-          <footer className="bg-[#2D3748] text-white py-8">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-              <p className="font-noto-sans-jp">
-                © 2025 福祉M&A支援. All rights reserved.
-              </p>
-            </div>
-          </footer>
+          <Footer />
         </div>
       </div>
     );
   }
-  
-  
-  
+  export default MainComponent;
