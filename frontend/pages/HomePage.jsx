@@ -1,3 +1,7 @@
+import React, { useState } from "react";
+import Footer from "../components/common/Footer";
+import HeroSection from "../components/home/HeroSection";
+import StrengthsSection from "../components/home/StrengthsSection";
 function MainComponent() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
   
@@ -30,44 +34,9 @@ function MainComponent() {
         )}
   
         <div className="pt-16">
-          <section className="relative bg-[#F7FAFC] py-20 md:py-32">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center">
-                <h1 className="text-3xl md:text-5xl font-bold font-noto-sans-jp text-[#2D3748] mb-6">
-                  就労継続支援B型施設の<br />M&Aに特化したプラットフォーム
-                </h1>
-                <p className="text-lg md:text-xl font-noto-sans-jp text-gray-600 mb-8">
-                  施設運営の継続と発展をサポートする<br />専門家による安心のM&Aマッチング
-                </p>
-                <a href="#contact" className="inline-block bg-[#2C5282] text-white font-noto-sans-jp px-8 py-4 rounded-lg text-lg hover:bg-[#1A365D] transition-colors">
-                  無料相談を始める
-                </a>
-              </div>
-            </div>
-          </section>
+            <HeroSection />
   
-          <section id="features" className="py-20 bg-white">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <h2 className="text-3xl font-bold font-noto-sans-jp text-center text-[#2D3748] mb-16">選ばれる3つの理由</h2>
-              <div className="grid md:grid-cols-3 gap-8">
-                <div className="text-center p-6 rounded-lg bg-[#F7FAFC]">
-                  <i className="fas fa-handshake text-4xl text-[#2C5282] mb-4"></i>
-                  <h3 className="text-xl font-bold font-noto-sans-jp text-[#2D3748] mb-3">専門性の高いマッチング</h3>
-                  <p className="font-noto-sans-jp text-gray-600">就労継続支援B型施設に特化した<br />専門家による丁寧なマッチング</p>
-                </div>
-                <div className="text-center p-6 rounded-lg bg-[#F7FAFC]">
-                  <i className="fas fa-shield-alt text-4xl text-[#2C5282] mb-4"></i>
-                  <h3 className="text-xl font-bold font-noto-sans-jp text-[#2D3748] mb-3">信頼性の高い情報</h3>
-                  <p className="font-noto-sans-jp text-gray-600">実績豊富な専門家による<br />厳正な審査と情報提供</p>
-                </div>
-                <div className="text-center p-6 rounded-lg bg-[#F7FAFC]">
-                  <i className="fas fa-chart-line text-4xl text-[#2C5282] mb-4"></i>
-                  <h3 className="text-xl font-bold font-noto-sans-jp text-[#2D3748] mb-3">スピーディーな進行</h3>
-                  <p className="font-noto-sans-jp text-gray-600">効率的なプロセスで<br />スムーズなM&Aをサポート</p>
-                </div>
-              </div>
-            </div>
-          </section>
+            <StrengthsSection />
   
           <section id="contact" className="py-20 bg-[#F7FAFC]">
             <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -83,15 +52,9 @@ function MainComponent() {
             </div>
           </section>
   
-          <footer className="bg-[#2D3748] text-white py-8">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-              <p className="font-noto-sans-jp">© 2025 福祉M&A支援. All rights reserved.</p>
-            </div>
-          </footer>
+          <Footer />
         </div>
       </div>
     );
   }
-  
-  
-  
+  export default MainComponent;
