@@ -1,16 +1,21 @@
 const express = require('express');
-const contactRoutes = require('./api/routes/contactRoutes');
-const chatbotRoutes = require('./api/routes/chatbotRoutes');
-const resourceRoutes = require('./api/routes/resourceRoutes');
+
+const { config, connectDB } = require('./config/config');
+
+
 
 const app = express();
 app.use(express.json());
 
-app.use('/api/contact', contactRoutes);
-app.use('/integrations/chat-gpt', chatbotRoutes);
-app.use('/api/resources', resourceRoutes);
 
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+// Simple route for health check
+app.get('/', (req, res) => {
+  res.send('API running');
+});
+
+connectDB();
+
+app.listen(config.port, () => {
+  console.log(`Server started on port ${config.port}`);
+
 });

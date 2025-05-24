@@ -1,0 +1,23 @@
+version: '3.9'
+services:
+  backend:
+    build:
+      context: ..
+      dockerfile: infrastructure/Dockerfile
+    volumes:
+      - ../backend:/app/backend
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - MONGODB_URL=mongodb://db:27017/welfare
+    depends_on:
+      - db
+  db:
+    image: mongo:6
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+volumes:
+  mongo-data:
