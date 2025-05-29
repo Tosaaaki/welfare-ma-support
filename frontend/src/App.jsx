@@ -1,11 +1,8 @@
 import React from 'react';
+import HomePage from '../pages/HomePage';
 
 function App() {
-  return (
-    <div>
-      <h1>Welcome to Welfare MA Support</h1>
-    </div>
-  );
+  return <HomePage />;
 }
 
 export default App;
