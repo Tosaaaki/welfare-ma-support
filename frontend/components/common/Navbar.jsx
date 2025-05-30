@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+// メニュー表示内容は日本語に統一
 const menuItems = [
-  { label: 'Home', path: '/' },
-  { label: 'Seller', path: '/seller' },
-  { label: 'Service Overview', path: '/service' },
-  { label: 'Success Stories', path: '/success' },
-  { label: 'Resources', path: '/resources' },
-  { label: 'FAQ', path: '/faq' },
-  { label: 'Contact', path: '/contact' },
-  { label: 'Legal', path: '/legal' },
-  { label: 'Property Listings', path: '/listings' },
+  { label: 'ホーム', path: '/' },
+  { label: '売却をお考えの方', path: '/seller' },
+  { label: 'サービス概要', path: '/service' },
+  { label: '成功事例', path: '/success' },
+  { label: 'お役立ち情報', path: '/resources' },
+  { label: 'よくある質問', path: '/faq' },
+  { label: 'お問い合わせ', path: '/contact' },
+  { label: '法務', path: '/legal' },
 ];
 
 const Navbar = () => {
