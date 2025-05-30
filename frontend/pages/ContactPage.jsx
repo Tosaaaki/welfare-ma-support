@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import Footer from "../components/common/Footer";
+import Navbar from "../components/common/Navbar";
 import useHandleStreamResponse from "../utils/useHandleStreamResponse";
 function MainComponent() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [formData, setFormData] = useState({
       name: '',
       email: '',
@@ -98,42 +97,8 @@ function MainComponent() {
   
     return (
       <div className="min-h-screen bg-white">
-        <nav className="bg-white shadow-lg fixed w-full z-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between h-16">
-              <div className="flex items-center">
-                <Link to="/" className="text-2xl font-noto-sans-jp font-bold text-[#2C5282]">
-                  福祉M&A支援
-                </Link>
-              </div>
-              <div className="hidden md:flex items-center space-x-8">
-                <Link to="/service" className="font-noto-sans-jp text-gray-700 hover:text-[#2C5282]">
-                  サービス案内
-                </Link>
-                <Link to="/faq" className="font-noto-sans-jp text-gray-700 hover:text-[#2C5282]">
-                  よくある質問
-                </Link>
-              </div>
-              <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden">
-                <i className={`fas ${isMenuOpen ? "fa-times" : "fa-bars"} text-2xl text-gray-600`}></i>
-              </button>
-            </div>
-          </div>
-        </nav>
-  
-        {isMenuOpen && (
-          <div className="md:hidden fixed top-16 w-full bg-white shadow-lg z-40">
-            <div className="px-4 py-2 space-y-3">
-              <Link to="/service" className="block font-noto-sans-jp text-gray-700">
-                サービス案内
-              </Link>
-              <Link to="/faq" className="block font-noto-sans-jp text-gray-700">
-                よくある質問
-              </Link>
-            </div>
-          </div>
-        )}
-  
+        <Navbar />
+
         <div className="pt-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <h1 className="text-3xl font-bold font-noto-sans-jp text-[#2D3748] text-center mb-12">
