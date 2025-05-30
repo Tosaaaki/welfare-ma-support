@@ -9,6 +9,7 @@ import LegalPage from '../pages/LegalPage';
 import ResourcesPage from '../pages/ResourcesPage';
 import ServiceOverviewPage from '../pages/ServiceOverviewPage';
 import SuccessStoriesPage from '../pages/SuccessStoriesPage';
+import PropertyListingPage from '../pages/PropertyListingPage';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/resources" element={<ResourcesPage />} />
         <Route path="/service" element={<ServiceOverviewPage />} />
         <Route path="/success" element={<SuccessStoriesPage />} />
+        <Route path="/listings" element={<PropertyListingPage />} />
         <Route path="*" element={<HomePage />} />
       </Routes>
     </Router>
