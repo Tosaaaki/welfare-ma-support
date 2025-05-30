@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Footer from "../components/common/Footer";
 function MainComponent() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -85,14 +86,14 @@ function MainComponent() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between h-16">
               <div className="flex items-center">
-                <a href="/" className="text-2xl font-noto-sans-jp font-bold text-[#2C5282]">
+                <Link to="/" className="text-2xl font-noto-sans-jp font-bold text-[#2C5282]">
                   福祉M&A支援
-                </a>
+                </Link>
               </div>
               <div className="hidden md:flex items-center space-x-8">
-                <a href="/service" className="font-noto-sans-jp text-gray-700 hover:text-[#2C5282]">
+                <Link to="/service" className="font-noto-sans-jp text-gray-700 hover:text-[#2C5282]">
                   サービス案内
-                </a>
+                </Link>
                 <a href="#contact" className="font-noto-sans-jp bg-[#2C5282] text-white px-6 py-2 rounded-md hover:bg-[#1A365D]">
                   無料相談
                 </a>
@@ -107,9 +108,9 @@ function MainComponent() {
         {isMenuOpen && (
           <div className="md:hidden fixed top-16 w-full bg-white shadow-lg z-40">
             <div className="px-4 py-2 space-y-3">
-              <a href="/service" className="block font-noto-sans-jp text-gray-700">
+              <Link to="/service" className="block font-noto-sans-jp text-gray-700">
                 サービス案内
-              </a>
+              </Link>
               <a href="#contact" className="block font-noto-sans-jp text-[#2C5282]">
                 無料相談
               </a>
