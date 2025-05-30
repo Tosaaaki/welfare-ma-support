@@ -25,6 +25,7 @@ function App() {
         <Route path="/service" element={<ServiceOverviewPage />} />
         <Route path="/property-listings" element={<PropertyListingPage />} />
         <Route path="/success" element={<SuccessStoriesPage />} />
+        <Route path="/listings" element={<PropertyListingPage />} />
         <Route path="*" element={<HomePage />} />
       </Routes>
     </Router>
