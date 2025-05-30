@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/common/Footer";
+import useHandleStreamResponse from "../utils/useHandleStreamResponse";
 function MainComponent() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [formData, setFormData] = useState({
