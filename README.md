@@ -42,6 +42,19 @@
 - 画面コンポーネントは `frontend/components` に配置し、ページ単位のコンポーネントは `frontend/pages` に配置します。
 - 開発中は `npm start` でローカルサーバーを立ち上げ、ホットリロードで確認できます。
 
+## OpenAI API の利用
+
+`backend/services/chatGPTService.js` の `createChatCompletion` 関数では、第三引数に
+`true` を渡すことで JSON 形式の応答を要求できます。
+
+```javascript
+const messages = [{ role: 'user', content: 'Tell me a joke.' }];
+const res = await createChatCompletion(messages, false, true);
+```
+
+このオプションでは内部的に `response_format` を指定し、システムプロンプトに JSON で
+回答するよう指示を追加しています。
+
 ## ライセンス
 
 このプロジェクトは MIT ライセンスの下で公開されています。
